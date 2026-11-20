@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shashank S Shendre | Bio-data</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--ink:#18243d;--muted:#748097;--blue:#526cf0;--blue-dark:#354bd0;--pale:#f4f6ff;--line:#e6eaf2;--white:#fff;--mint:#c7f3e7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:'DM Sans',Arial,sans-serif;font-size:15px;line-height:1.7;background:#fff}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,90%);margin:0 auto}
+.header{height:78px;background:#fff;border-bottom:1px solid #edf0f5;display:flex;align-items:center;position:sticky;top:0;z-index:20}
+.nav-container{display:flex;align-items:center;justify-content:space-between}
+.brand{font:800 18px 'Manrope',sans-serif;letter-spacing:-.7px;display:flex;align-items:center;gap:7px}
+.brand-mark{width:30px;height:30px;border-radius:9px;background:var(--blue);color:white;display:grid;place-items:center;font-size:15px;margin-right:3px}
+.brand-accent{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:8px}
+.nav-links a{padding:9px 17px;border-radius:8px;color:#69758b;font-weight:600;font-size:14px;transition:.2s}
+.nav-links a:hover,.nav-links a.current{background:#f0f2ff;color:var(--blue-dark)}
+.nav-toggle{display:none;border:0;background:none;font-size:25px;color:var(--ink);cursor:pointer}
+.page-banner{background:linear-gradient(115deg,#121d3b,#24386f);padding:65px 0 60px;color:#fff}
+.page-banner .eyebrow{margin:0 0 12px;font-size:11px;font-weight:700;letter-spacing:2px;color:#8e9eff}
+.page-banner h1{font:800 clamp(40px,5vw,56px)/1.1 'Manrope',sans-serif;letter-spacing:-2px;margin:0}
+.page-banner h1 span{color:#9eafff}
+.page-banner>div>p:not(.eyebrow){color:#c1cbe4;margin:10px 0 20px}
+.print-button{padding:10px 16px;font-size:12px;background:var(--blue);color:white;border:0;border-radius:8px;font-weight:700;cursor:pointer}
+.print-button:hover{background:#647cff}
+.bio-layout{display:grid;grid-template-columns:285px 1fr;gap:35px;padding-top:55px;padding-bottom:80px;align-items:start}
+.bio-sidebar{background:#172344;color:#fff;border-radius:13px;padding:30px 25px;box-shadow:0 15px 35px #17244a18}
+.bio-avatar{width:100px;height:100px;border-radius:50%;margin:0 auto 15px;display:grid;place-items:center;background:linear-gradient(145deg,#aebaff,#e4e8ff);border:5px solid #ffffff28;color:#354bd0;font:800 26px 'Manrope',sans-serif}
+.bio-sidebar h2{text-align:center;font:800 20px 'Manrope',sans-serif;margin:0}
+.bio-role{text-align:center;color:#aab7db;font-size:11px;margin:3px 0 22px}
+.bio-side-line{height:1px;background:#ffffff24;margin:20px 0}
+.side-caption{font-size:9px;letter-spacing:1.5px;color:#91a4e8;font-weight:700;margin:0 0 14px}
+.contact-item{font-size:11px;color:#d9e0f6;margin:12px 0;overflow-wrap:anywhere}
+.contact-item b{display:block;font-size:8px;letter-spacing:1.3px;color:#8595c2;margin-bottom:3px}
+.interest-tags{display:flex;gap:6px;flex-wrap:wrap}
+.interest-tags span{background:#ffffff12;color:#dce4ff;border:1px solid #ffffff18;border-radius:5px;padding:5px 9px;font-size:10px}
+.bio-details{border:1px solid var(--line);border-radius:13px;padding:30px 35px}
+.bio-block{padding:0 0 25px;margin-bottom:25px;border-bottom:1px solid var(--line)}
+.bio-block:last-child{border:0;margin:0;padding:0}
+.bio-block .eyebrow{margin:0 0 7px;color:var(--blue);font-size:11px;font-weight:700;letter-spacing:2px}
+.bio-block>h2{font:800 25px 'Manrope',sans-serif;margin:0 0 10px}
+.bio-block>h2 span{color:var(--blue)}
+.bio-intro,.bio-block>p:not(.eyebrow){font-size:12px;color:#6d7890;line-height:1.9;margin:0}
+.bio-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 25px}
+.bio-field{padding:13px 0;border-bottom:1px solid #edf0f5;display:flex;flex-direction:column;gap:4px}
+.bio-field small{font-size:8px;letter-spacing:1.2px;color:#98a2b5;font-weight:700}
+.bio-field strong{font-size:12px;font-weight:600;overflow-wrap:anywhere}
+.bio-field.wide{grid-column:1/-1}
+.education-highlight{display:flex;align-items:center;gap:13px;background:#f5f6ff;border-radius:9px;padding:14px}
+.education-icon{width:37px;height:37px;border-radius:9px;background:#e4e8ff;color:var(--blue);display:grid;place-items:center;font-size:18px}
+.education-highlight strong{font:700 12px 'Manrope',sans-serif}
+.education-highlight p,.education-note{font-size:10px;color:#7c879d;margin:3px 0 0}
+.education-note{margin-top:10px;font-size:11px}
+.bio-signature{display:flex;justify-content:space-between;align-items:end;margin-top:20px;font-size:10px;color:#79849a}
+.bio-signature strong{text-align:center;color:var(--ink);font:700 12px 'Manrope',sans-serif}
+.bio-signature small{display:block;color:#9aa4b6;font:400 9px 'DM Sans',sans-serif}
+.footer{background:#111b36;color:#9ba7c2;padding:23px 0}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.footer-brand{color:#fff;font-size:14px}.footer-brand .brand-accent{color:#91a2ff}.footer-brand .brand-mark{display:none}
+.footer p{font-size:11px;margin:0}
+.back-top{font-size:11px;color:#c2cced}
+@media(max-width:800px){
+ .bio-layout{grid-template-columns:1fr}.bio-sidebar{max-width:none}
+}
+@media(max-width:600px){
+ .header{height:68px}.nav-toggle{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:white;padding:12px 5%;border-bottom:1px solid var(--line);box-shadow:0 10px 20px #17244a0d;flex-direction:column;align-items:stretch}
+ .nav-links.open{display:flex}.nav-links a{padding:12px}
+ .page-banner{padding:48px 0}.bio-layout{padding-top:30px}.bio-details{padding:23px 18px}.bio-grid{grid-template-columns:1fr}.bio-field.wide{grid-column:auto}
+}
+@media print{
+ .header,.footer,.print-button,.nav-toggle{display:none!important}
+ body{background:white;color:#111}.page-banner{background:white;color:#111;padding:0 0 20px}.page-banner h1{color:#111;font-size:28px}.page-banner h1 span{color:#333}.page-banner>div>p:not(.eyebrow){color:#555}
+ .document-wrap,.bio-layout{padding:0;width:100%}.bio-details{box-shadow:none;border:0;padding:0}.bio-sidebar{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+}
+  </style>
+</head>
+<body>
+<header class="header"><div class="container nav-container">
+  <a class="brand" href="index.html"><span class="brand-mark">S</span> Personal<span class="brand-accent">Portfolio</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="resume.html">Resume</a><a class="current" href="biodata.html">Bio-data</a></nav>
+</div></header>
+<main>
+  <section class="page-banner"><div class="container"><p class="eyebrow">02 — PERSONAL PROFILE</p><h1>My <span>Bio-data.</span></h1><p>A comprehensive overview of my personal background and official details.</p><button class="print-button" onclick="window.print()">Print this page ↗</button></div></section>
+  <section class="container bio-layout">
+    <aside class="bio-sidebar">
+      <div class="bio-avatar">SS</div><h2>Shashank S Shendre</h2><p class="bio-role">Computer Science Student</p>
+      <div class="bio-side-line"></div>
+      <p class="side-caption">CONTACT INFORMATION</p>
+      <p class="contact-item"><b>EMAIL</b>[your.email@example.com]</p>
+      <p class="contact-item"><b>PHONE</b>[+91-XXXXXXXXXX]</p>
+      <p class="contact-item"><b>LOCATION</b>Hubli, Karnataka</p>
+      <div class="bio-side-line"></div><p class="side-caption">PERSONAL INTERESTS</p><div class="interest-tags"><span>Reading</span><span>Technology</span><span>Chess</span><span>Software Design</span></div>
+    </aside>
+    <div class="bio-details">
+      <section class="bio-block"><p class="eyebrow">A QUICK INTRODUCTION</p><h2>Personal <span>Details</span></h2><p class="bio-intro">I am an undergraduate engineering student pursuing Computer Science and Engineering. I enjoy learning programming fundamentals, exploring software design concepts, and building useful applications through academic activities.</p></section>
+      <section class="bio-block"><h3>Basic Information</h3><div class="bio-grid">
+        <div class="bio-field"><small>FULL NAME</small><strong>Shashank S Shendre</strong></div><div class="bio-field"><small>DATE OF BIRTH</small><strong>02/06/2006</strong></div>
+        <div class="bio-field"><small>GENDER</small><strong>Male</strong></div><div class="bio-field"><small>NATIONALITY</small><strong>Indian</strong></div>
+        <div class="bio-field"><small>MARITAL STATUS</small><strong>Single</strong></div><div class="bio-field"><small>LANGUAGES KNOWN</small><strong>Kannada, English, Hindi</strong></div>
+        <div class="bio-field wide"><small>PERMANENT ADDRESS</small><strong>Hubli, Dharwad District, Karnataka - 580020</strong></div>
+      </div></section>
+      <section class="bio-block"><h3>Educational Background</h3><div class="education-highlight"><span class="education-icon">⌂</span><div><strong>B.E. — Computer Science &amp; Engineering</strong><p>[College Name] · [Year of Study]</p></div></div><p class="education-note">Completed Pre-University course (PUC) and SSLC secondary education in Hubli with high academic standing.</p></section>
+      <section class="bio-block"><h3>Declaration</h3><p>I hereby declare that all the information furnished above is true and correct to the best of my knowledge and belief.</p><div class="bio-signature"><span>Place: Hubli<br>Date: 02/06/2006</span><strong>Shashank S Shendre<small>Signature</small></strong></div></section>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html">Personal<span class="brand-accent">Portfolio</span></a><p>Bio-data Page · © <span id="year"></span></p><a href="index.html" class="back-top">Home page ↗</a></div></footer>
+<script src="./script.js"></script>
+</body>
+</html>
